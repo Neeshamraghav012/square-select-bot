@@ -9,11 +9,11 @@ from langchain.agents import initialize_agent
 from langchain.chains import ConversationChain
 from langchain import PromptTemplate
 
-pinecone.init(api_key="d036434f-25c0-41e1-8dd7-428eafd5ba2c", environment="us-west4-gcp-free")
+pinecone.init(api_key="XXXX", environment="XXXX")
 
 index = pinecone.Index("squareselect")
 
-os.environ['OPENAI_API_KEY'] = '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'
+os.environ['OPENAI_API_KEY'] = 'XXXX'
 
 
 
@@ -75,7 +75,7 @@ conversational_memory = ConversationBufferWindowMemory(
 
 # initialize LLM (we use ChatOpenAI because we'll later define a `chat` agent)
 llm = ChatOpenAI(
-        openai_api_key="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",
+        openai_api_key="XXXX,
         temperature=0,
         model_name='gpt-3.5-turbo',
 )
